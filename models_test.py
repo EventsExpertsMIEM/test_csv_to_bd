@@ -53,9 +53,10 @@ class SOHE_additional(Base):
 
     area_id = Column(Integer, ForeignKey(
         'Spec_of_h_ed.id'), nullable=False)
-    level = Column(Level, nullable=False)
+    level = Column(Level, primary_key=True)
     id = Column(Integer, primary_key=True)
     full_name = Column(String, nullable=False)
+# как сделать составной первичный ключ?
 
 
 engine = create_engine('sqlite:///testbase.db')
